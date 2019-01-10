@@ -128,6 +128,10 @@ function getBaseConfig(options) {
       },
       extraResolveAliases, options.resolveAliases || {});
   let baseConfig = {
+    devServer: {
+      compress: true,
+      disableHostCheck: true,
+    },
     resolve: {
       extensions: ['.ts', '.js'],
       /**
